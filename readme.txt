@@ -27,3 +27,6 @@ git reflog 查看命令历史重返未来版本
 		但是这样操作的前提是修改还没有推送到远程库
 		
 		
+git rm test.txt  删除test.txt
+git commit -m "cccc"  提交到版本库，并添加备注信息cccc
+
