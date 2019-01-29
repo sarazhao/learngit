@@ -30,3 +30,34 @@ git reflog 查看命令历史重返未来版本
 git rm test.txt  删除test.txt
 git commit -m "cccc"  提交到版本库，并添加备注信息cccc
 
+----------------------------------
+
+  如果输入$ git remote add origin git@github.com:djqiang（github帐号名）/gitdemo（项目名）.git 
+
+    提示出错信息：fatal: remote origin already exists.
+
+    解决办法如下：
+
+    1、先输入$ git remote rm origin
+
+    2、再输入$ git remote add origin git@github.com:djqiang/gitdemo.git 就不会报错了！
+
+-------------------------------------
+https://www.linuxidc.com/Linux/2012-04/58985.htm
+
+https://ihower.tw/rails/
+
+
+问题（Non-fast-forward）的出现原因在于：git仓库中已经有一部分代码，所以它不允许你直接把你的代码覆盖上去。于是你有2个选择方式：
+
+1，强推，即利用强覆盖方式用你本地的代码替代git仓库内的内容
+
+git push -f
+
+2，先把git的东西fetch到你本地然后merge后再push
+
+$ git fetch
+
+$ git merge
+
+--------------------------------------
